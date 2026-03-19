@@ -1,5 +1,3 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
   display: flex;
   flex-direction: column;
@@ -7,8 +5,7 @@
   background-color: var(--background-color);
   background-attachment: fixed;
   background-image: var(--background-image);
-  background-position: center;
-  background-repeat: repeat;
+  position: center;
   background-size: cover;
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
 }
@@ -85,10 +82,6 @@
   flex-direction: column;
 }
 
-.header__theme-menu-item {
-  margin-block-end: 10px;
-}
-
 .header__theme-menu-button:hover {
   outline: 1px solid var(--button-outline-color-hover);
 }
@@ -118,7 +111,6 @@
   display: grid;
   font-weight: 700;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  line-height: 83%;
   color: var(--title-color);
   text-shadow: 4px 4px var(--accent-color);
 }
@@ -172,9 +164,9 @@ main {
 }
 
 .main__list-card-text {
-font-weight: 400;
-font-size: 18px;
-line-height: 23.4px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23.4px;
 }
 
 
@@ -210,6 +202,7 @@ line-height: 23.4px;
   min-height: 668px;
   display: grid;
   position: relative;
+  background-color: var(--background-color);
 }
 
 .footer__title {
@@ -231,17 +224,14 @@ line-height: 23.4px;
   }
 
   .decor_text {
-    position: absolute;
-    color: var(--decor-color);
     top: 20px;
     right: 48px;
-    font-weight: 400;
-    font-size: 18px;
-    text-align: center;
+
   }
 
   .header {
     padding: 0px;
+    
   }
 
   .header__theme-menu-list {
@@ -293,7 +283,6 @@ line-height: 23.4px;
   .main__list_card-modified {
     grid-column: 1 / span 2;
     grid-row: 2;
-    gap: 20px;
   }
 
   .main__list-title-modified {
@@ -324,9 +313,6 @@ line-height: 23.4px;
   }
 
   .main__galery_image {
-    width: 100%;
-    height: 100%;
-    padding: 0;
     margin: 0;
     object-fit: cover;
   }
@@ -359,7 +345,6 @@ line-height: 23.4px;
 
 @media (width >= 1024px) {
   .header {
-    padding: 0;
     margin: 0;
   }
 
@@ -372,7 +357,6 @@ line-height: 23.4px;
 
   .header__article {
     max-width: 491px;
-    justify-self: end;
     margin: 0 20px 20px 0;
   }
 
@@ -401,20 +385,13 @@ line-height: 23.4px;
   }
 
   .main__list_card-modified {
-    grid-column: 1 / span 2;
-    grid-row: 2;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
   }
 
-  .main__list-title-modified {
-    grid-row: 1;
-    grid-column: 1 / span 2;
-  }
 
   .main__galery {
-    grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
     padding-top: 10px;
     padding-bottom: 60px;
@@ -426,9 +403,6 @@ line-height: 23.4px;
   }
 
   .header__theme-menu {
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
     align-self: flex-start;
     justify-self: center;
   }

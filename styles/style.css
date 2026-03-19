@@ -1,3 +1,5 @@
+/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+
 .page {
   display: flex;
   flex-direction: column;
@@ -5,7 +7,7 @@
   background-color: var(--background-color);
   background-attachment: fixed;
   background-image: var(--background-image);
-  position: center;
+  background-position: center;
   background-size: cover;
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
 }

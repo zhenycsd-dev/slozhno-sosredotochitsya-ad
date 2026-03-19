@@ -166,7 +166,7 @@ main {
 }
 
 .main__list-title-decorated {
-  background-color:  var(--accent-color);
+  background-color: var(--accent-color);
   color: var(--title-decor-color);
 }
 

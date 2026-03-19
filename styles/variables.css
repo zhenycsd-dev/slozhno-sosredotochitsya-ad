@@ -15,6 +15,9 @@
   --link-outline-color-hover: #F1B2CE;
   --link-outline-color-focus: #F1B2CE;
   --link-outline-color-disabled: #FF0070;
+  --button-outline-color-hover: rgba(255, 0, 112, 0.4);
+  --button-outline-color-focus: #FF0070;
+  --button-outline-color-disabled: #FF0070;
   --decor-color: #FF0070;
   --corber-color: #FF0070;
   --title-decor-color: #000028;

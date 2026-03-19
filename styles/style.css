@@ -6,6 +6,10 @@
   position: relative;
   background-color: var(--background-color);
   background-attachment: fixed;
+  background-image: var(--background-image);
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
 }
 
@@ -14,10 +18,6 @@
 .header {
   position: relative;
   padding: 10px;
-  background-image: var(--background-image);
-  background-position: center;
-  background-repeat: repeat;
-  background-size: cover;
   height: 100vh;
   min-height: 668px;
   display: grid;
@@ -50,15 +50,15 @@
   left: 10px;
 }
 
-.page::before {
+.decor_text::after {
   z-index: 3;
   content: "";
   position: absolute;
   width: 10px;
   height: 10px;
   background-color: var(--decor-color);
-  top: 18px;
-  right: 19px;
+  top: 9px;
+  left: 41px;
   border-radius: 50%;
   box-shadow: 0px 0px 4px 2px var(--decor-color);
 }
@@ -90,15 +90,15 @@
 }
 
 .header__theme-menu-button:hover {
-  outline: 1px solid var(--link-outline-color-hover);
+  outline: 1px solid var(--button-outline-color-hover);
 }
 
 .header__theme-menu-button:focus {
- border-bottom: 1px solid var( --link-outline-color-focus);
+ border-bottom: 1px solid var(--button-outline-color-focus);
 }
 
 .header__theme-menu-button:disabled {
-  outline: 1px solid var(--link-outline-color-disabled);
+  outline: 1px solid var(--button-outline-color-disabled);
 }
 
 .header__theme-menu-button {
@@ -119,7 +119,6 @@
   font-weight: 700;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 83%;
-  letter-spacing: 0%;
   color: var(--title-color);
   text-shadow: 4px 4px var(--accent-color);
 }
@@ -133,13 +132,11 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 23.4px;
-  letter-spacing: 0%;
 }
 
 main {
   background-color: var(--background-color);
   padding: 40px 10px 35px 10px;
-  
 }
 
 .main__section {
@@ -197,6 +194,10 @@ line-height: 23.4px;
   color: var(--title-decor-color);
 }
 
+.main__galery {
+  padding-bottom: 0px;
+}
+
 .main__galery_image {
   width: 100%;
   height:100%;
@@ -218,10 +219,6 @@ line-height: 23.4px;
 
 
 @media (width >= 768px) {
-  .page::before {
-    top: 28px;
-    right: 29px;
-  }
   
   .decorated-zone::before {
     top: 20px;
@@ -252,10 +249,8 @@ line-height: 23.4px;
   }
   
   .title {
-    font-weight: 700;
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     line-height: 83%;
-    letter-spacing: 0%;
   }
 
   .header__article {
@@ -269,41 +264,56 @@ line-height: 23.4px;
   }
 
   .main__section {
-    padding-bottom: 60px;
+    padding-bottom: 40px;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    gap: 20px;
   }
 
-  .main__section_card-row {
-      display: grid;
-      grid-template-columns: 0.5fr 1fr;
-      gap: 20px;
-    }
-
-  .main__list_card-row {
+  .main__section_list {
     grid-column: 2;
   }
 
-.main__title_card-row {
-  grid-row: 1 / span 2;
-}
-
   .main__title {
     max-width: 236px;
+    grid-row: 1 / span 2;
   }
 
  .main__list-card-title {
     max-width: none;
   }
 
+  .main__section_card-modified {
+    grid-template-rows: min-content 1fr;
+    grid-template-columns: 1fr;
+    padding-bottom: 60px;
+    gap: 0px;
+  }
+
+  .main__list_card-modified {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+    gap: 20px;
+  }
+
+  .main__list-title-modified {
+    grid-row: 1;
+    grid-column: 1 / span 2;
+  }
+
   .main__list-title-decorated {
     margin: 0;
     height: fit-content;
     max-width: none;
+    grid-row: 1;
   }
 
   .main__galery {
     display: grid;
     gap: 20px;
     grid-template-columns: 1fr 1fr 1fr;
+    padding-top: 20px;
+    padding-bottom: 60px;
   }
 
   .main__list_galery-title {
@@ -380,27 +390,35 @@ line-height: 23.4px;
   }
 
   .main__section {
-    grid-column: 1 / 4;
-    display: grid;
-    grid-template-columns: 0.5fr 1fr;
     gap: 10px;
+    padding-bottom: 50px;
   }
 
-  .main__section_card-column {
+  .main__section_card-modified {
     grid-template-rows: min-content 1fr;
     grid-template-columns: 1fr;
+    padding-bottom: 60px;
   }
 
-  .main__list_card-column {
+  .main__list_card-modified {
+    grid-column: 1 / span 2;
+    grid-row: 2;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
   }
 
-.main__galery {
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
-}
+  .main__list-title-modified {
+    grid-row: 1;
+    grid-column: 1 / span 2;
+  }
+
+  .main__galery {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding-top: 10px;
+    padding-bottom: 60px;
+  }
 
   .main__list_galery-title {
     max-width: none;

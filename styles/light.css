@@ -15,6 +15,9 @@
   --link-outline-color-hover: rgba(50, 49, 45, 0.4);
   --link-outline-color-focus: #353430;
   --link-outline-color-disabled: #353430;
+  --button-outline-color-hover: rgba(50, 49, 45, 0.4);
+  --button-outline-color-focus: #353430;
+  --button-outline-color-disabled: #353430;
   --decor-color: transparent;
   --corber-color: #353430;
   --title-decor-color: #353430;
@@ -27,12 +30,15 @@
     --background-color: #FFF1F7;
     --accent-color: #FF8DCB;
     --title-color: #FFC2E6;
-    --text-color: #F1B2CE;
+    --text-color: #353430;
     --header-article-color: #353430;
     --title-text-color: #353430;
     --link-outline-color-hover: #32312D66;
     --link-outline-color-focus: #353430;
     --link-outline-color-disabled: #353430;
+    --button-outline-color-hover: rgba(50, 49, 45, 0.4);
+    --button-outline-color-focus: #353430;
+    --button-outline-color-disabled: #353430;
     --decor-color: transparent;
     --corber-color: #353430;
     --title-decor-color: #353430;

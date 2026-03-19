@@ -10,24 +10,29 @@
   --accent-color: #FF8DCB;
   --title-color: #FFC2E6;
   --title-text-color: #353430;
-  --text-color: #F1B2CE;
-  --link-outline-color-hover: #32312D66;
+  --header-article-color: #353430;
+  --text-color: #353430;
+  --link-outline-color-hover: rgba(50, 49, 45, 0.4);
   --link-outline-color-focus: #353430;
+  --link-outline-color-disabled: #353430;
   --decor-color: transparent;
   --corber-color: #353430;
   --title-decor-color: #353430;
+  --border-color: #32312D66;
 }
   
 @media (prefers-color-scheme: light) {
-  :root {   
+  :root {
     --background-image: url('../images/cover-image-light.png');
     --background-color: #FFF1F7;
     --accent-color: #FF8DCB;
     --title-color: #FFC2E6;
     --text-color: #F1B2CE;
+    --header-article-color: #353430;
     --title-text-color: #353430;
     --link-outline-color-hover: #32312D66;
     --link-outline-color-focus: #353430;
+    --link-outline-color-disabled: #353430;
     --decor-color: transparent;
     --corber-color: #353430;
     --title-decor-color: #353430;

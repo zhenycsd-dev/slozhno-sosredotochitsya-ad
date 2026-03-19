@@ -5,7 +5,6 @@
 */
 
 :root.theme-dark {
-:root.theme-dark {
   --background-image: url('../images/cover-image-dark.png');
   --background-color: #000028;
   --accent-color: #FF0070;
@@ -18,9 +17,4 @@
   --decor-color: #FF0070;
   --corber-color: #FF0070;
   --title-decor-color: #000028;
-}
-}
-
-.theme-dark .page {
-  /* Вам также нужно будет написать ряд подобных селекторов */
 }

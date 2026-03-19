@@ -1,5 +1,11 @@
+/*
+  Специально для светлой темы при наличии класса.
+  Здесь окажутся стили, которые нужно переопределить принудительно,
+  переключая тему
+*/
+
 :root.theme-light {
---background-image: url('../images/cover-image-light.png');
+  --background-image: url('../images/cover-image-light.png');
   --background-color: #FFF1F7;
   --accent-color: #FF8DCB;
   --title-color: #FFC2E6;
@@ -15,6 +21,7 @@
 
 
 @media (prefers-color-scheme: light) {
+  
   :root {   
     --background-image: url('../images/cover-image-light.png');
     --background-color: #FFF1F7;
@@ -29,6 +36,3 @@
     --title-decor-color: #353430;
   }
 }
-
-
-
